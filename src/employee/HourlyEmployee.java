@@ -1,6 +1,8 @@
+package employee;
+
 import java.util.Objects;
 
-public class HourlyEmployee extends Employee{
+public class HourlyEmployee extends Employee {
     private int hours;
     private float wage;
 

@@ -1,13 +1,28 @@
+import employee.BasePlusCommissionEmployee;
+import employee.CommissionEmployee;
 import employee.Employee;
 import employee.HourlyEmployee;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class Payroll {
     public static void main(String[] args) {
+        Employee[] myArray = new Employee[]{new HourlyEmployee("Tehila", "Cohen", 123456789, 10, 90),
+                new CommissionEmployee("David", "Levi", 987654321, (float) 750, 15),
+                new BasePlusCommissionEmployee("Simon", "Cohen", 123456780, 800, 15, 60)};
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        HourlyEmployee myEemployee=new HourlyEmployee();
+        for (int i = 0; i < 3; i++) {
+            //if(myArray[i] instanceof BasePlusCommissionEmployee)
+            float salary = myArray[i].earnings();
+            if(i == 2)
+                salary += (float) 0.1 * salary;
+            System.out.println(myArray[i] + " Salary = " + salary);
+        }
+
+
+
+       /* HourlyEmployee myEemployee=new HourlyEmployee();
         myEemployee.setId(123456789);
         System.out.println(myEemployee);
 
@@ -19,7 +34,6 @@ public class Main {
         };
 
 
-        /*
         System.out.printf("Hello and welcome!");
 
         for (int i = 1; i <= 5; i++) {

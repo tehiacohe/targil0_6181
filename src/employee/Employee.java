@@ -1,3 +1,5 @@
+package employee;
+
 import java.util.Objects;
 
 public abstract class Employee {
@@ -64,7 +66,7 @@ public abstract class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "employee.Employee{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", id=" + id +
